@@ -1,0 +1,375 @@
+/* Global Styles */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #2E7D32;
+    --accent-color: #8BC34A;
+    --dark-color: #263238;
+    --light-color: #f5f5f5;
+    --error-color: #f44336;
+    --warning-color: #ff9800;
+    --cardboard: #795548;
+    --glass: #03A9F4;
+    --metal: #607D8B;
+    --paper: #FFEB3B;
+    --plastic: #9C27B0;
+    --trash: #F44336;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    padding: 60px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #555;
+}
+
+/* Upload Area */
+.upload-area {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: white;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-color);
+}
+
+.upload-area i {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.upload-area p {
+    margin-bottom: 20px;
+}
+
+#file-input {
+    display: none;
+}
+
+.supported-types {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Features Section */
+.features {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.features h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 30px;
+}
+
+.feature-card h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+/* Results Section */
+.result-section {
+    padding: 60px 0;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.result-header h2 {
+    font-size: 2rem;
+}
+
+.result-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.image-preview {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.main-result {
+    margin-bottom: 30px;
+}
+
+.result-badge {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.result-badge.cardboard {
+    background-color: var(--cardboard);
+}
+.result-badge.glass {
+    background-color: var(--glass);
+}
+.result-badge.metal {
+    background-color: var(--metal);
+}
+.result-badge.paper {
+    background-color: var(--paper);
+    color: var(--dark-color);
+}
+.result-badge.plastic {
+    background-color: var(--plastic);
+}
+.result-badge.trash {
+    background-color: var(--trash);
+}
+
+.recycling-info {
+    background-color: #f0f7f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.recycling-info h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.recycling-info i {
+    font-size: 1.2rem;
+}
+
+/* Probability Chart */
+.probability-chart {
+    margin-top: 30px;
+}
+
+.chart-item {
+    margin-bottom: 15px;
+}
+
+.label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.bar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bar {
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.percentage {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .result-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        display: none;
+    }
+}
